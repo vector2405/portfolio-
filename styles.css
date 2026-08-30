@@ -37,7 +37,7 @@ html{
   font-size: 22px;
   font-weight: bold;
 }
-.navbar ul{
+.nav-links{
   display: flex;
   list-style: none;
   gap: 20px;
@@ -369,7 +369,7 @@ section{
   max-width: 600px;
   line-height: 1.8;
 }
-.menu-icon{
+.hamburger{
   display: none;
 }
 .section-title{
@@ -393,6 +393,10 @@ footer{
   color: #e2e8f0;
   border-top: 1px solid rgba(225, 225, 225, 0.1);
 }
+.nav-link.active{
+  color: #00bfff;
+  border-bottom: 2px solid #00bfff;
+}
 @media (max-width:768px){
   .projects{
     grid-template-columns: 1fr;
@@ -400,8 +404,18 @@ footer{
   nav{
     flex-direction: column;
   }
-  .navbar ul{
+  .nav-links{
     display: none;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav-links.active{
+    display: flex;
+  }
+  .nav-link{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
   }
   .profile-pic,
   .about-pic{
@@ -409,7 +423,7 @@ footer{
     max-width: 300px;
     height: auto;
   }
-  .menu-icon{
+  .hamburger{
     display: block;
     font-size: 30px;
     cursor: pointer;
