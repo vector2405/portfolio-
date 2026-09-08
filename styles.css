@@ -401,13 +401,19 @@ footer{
   .projects{
     grid-template-columns: 1fr;
   }
-  nav{
-    flex-direction: column;
+  .navnar{
+    flex-direction: row-reverse;
   }
   .nav-links{
     display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
     flex-direction: column;
     gap: 20px;
+    background: #1e3a8a;
+    padding: 20px;
+    border-radius: 10px;
   }
   .nav-links.active{
     display: flex;
@@ -427,6 +433,7 @@ footer{
     display: block;
     font-size: 30px;
     cursor: pointer;
+    order: -1;
   }
 }
 @keyframes float{
